@@ -161,7 +161,7 @@ h1 {
 /* --- Media Query para telas menores --- */
 @media (max-width: 768px) {
     .grid-header, .grade-curricular {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
     .grid-header h3 {
         font-size: 12px;
@@ -181,3 +181,4 @@ h1 {
         margin-bottom: 10px;
     }
 }
+
