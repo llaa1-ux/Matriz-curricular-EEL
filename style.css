@@ -1,10 +1,12 @@
 body {
-    font-family: sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
+    color: #333;
 }
 
+/* --- Cabeçalho --- */
 .header {
     display: flex;
     align-items: center;
@@ -13,7 +15,7 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .home-link {
@@ -30,56 +32,60 @@ body {
 .header-title {
     flex-grow: 1;
     text-align: center;
+    /* Remove a margem do ícone para centralizar corretamente */
+    margin-left: -40px; 
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 1.25rem; /* 20px */
     margin: 0;
 }
 
+/* --- Conteúdo Principal e Grade Curricular --- */
 .main-container {
     padding: 20px;
-    overflow-x: auto;
-}
-
-.grid-header, .grade-curricular {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    gap: 5px;
-}
-
-.grid-header {
-    margin-bottom: 5px;
-}
-
-.grid-header h3 {
-    text-align: center;
-    font-size: 14px;
-    color: #555;
-    margin: 0;
-    font-weight: normal;
-    padding: 5px 0;
 }
 
 .grade-curricular {
-    grid-auto-rows: minmax(70px, auto);
+    display: flex;
+    flex-direction: column; /* Layout de coluna para mobile */
+    gap: 20px;
+}
+
+.periodo-coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.periodo-coluna h3 {
+    text-align: center;
+    font-size: 1rem; /* 16px */
+    color: #555;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ddd;
 }
 
 .materia {
     background-color: #fff;
     border: 1px solid #ddd;
-    padding: 10px;
-    font-size: 11px;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 0.8rem; /* 12.8px */
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    line-height: 1.2;
+    line-height: 1.3;
     transition: background-color 0.2s, border-color 0.2s, color 0.2s;
     box-sizing: border-box;
+    min-height: 60px;
 }
 
+/* --- Estilos de Destaque --- */
 .materia.selecionada {
     background-color: #f44336;
     color: white;
@@ -94,16 +100,15 @@ h1 {
     font-weight: bold;
 }
 
+/* --- Seções Inferiores (Ênfases, Optativas) --- */
 .bottom-sections {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column; /* Empilha verticalmente em mobile */
     gap: 20px;
     padding: 20px;
 }
 
 .section-container {
-    flex: 1;
-    min-width: 300px;
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 15px;
@@ -112,6 +117,7 @@ h1 {
 
 .section-container h3 {
     margin-top: 0;
+    font-size: 1.1rem; /* 17.6px */
     color: #555;
     border-bottom: 1px solid #eee;
     padding-bottom: 10px;
@@ -123,22 +129,17 @@ h1 {
     margin-bottom: 5px;
 }
 
-/* --- Rodapé: Estilos para todos os tamanhos de tela --- */
+/* --- Rodapé --- */
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #d1d1d1;
     color: #4b4b4b;
-    padding: 20px 40px;
-    font-size: 14px;
-    flex-wrap: wrap;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.footer-copyright {
-    /* Não precisa de margem, o justify-content: space-between já faz o trabalho */
+    padding: 15px 20px;
+    font-size: 0.875rem; /* 14px */
+    flex-wrap: wrap; /* Permite quebrar linha se necessário */
+    gap: 15px;
 }
 
 .footer-contact {
@@ -152,95 +153,52 @@ h1 {
     text-decoration: none;
     display: flex;
     align-items: center;
+    gap: 8px;
 }
 
 .footer-contact a:hover {
     text-decoration: underline;
 }
 
-/* --- Media Query para telas menores --- */
-@media (max-width: 768px) {
-    .grid-header, .grade-curricular {
-        grid-template-columns: 1fr;
+
+/* --- Media Query para Telas Maiores (TABLET/DESKTOP) --- */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 1.5rem; /* 24px */
     }
-    .grid-header h3 {
-        font-size: 12px;
+
+    .main-container {
+        overflow-x: auto; /* Adiciona scroll horizontal se necessário em telas muito grandes */
     }
+
+    .grade-curricular {
+        display: grid; /* Volta a ser grid no desktop */
+        grid-template-columns: repeat(10, 1fr);
+        gap: 5px;
+    }
+
+    .periodo-coluna h3 {
+        font-size: 0.875rem; /* 14px */
+        font-weight: normal;
+        border-bottom: none; /* Remove a borda no desktop */
+    }
+    
     .materia {
-        font-size: 10px;
+        font-size: 0.6875rem; /* 11px */
+        min-height: 70px;
     }
-}
 
-@media (max-width: 600px) {
+    .bottom-sections {
+        flex-direction: row; /* Layout lado a lado no desktop */
+        flex-wrap: wrap;
+    }
+
+    .section-container {
+        flex: 1;
+        min-width: 300px;
+    }
+
     .footer {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px;
-    }
-    .footer-copyright {
-        margin-bottom: 10px;
+        padding: 20px 40px;
     }
 }
-/* ----- Seus novos estilos aqui ----- */
-///// ESTILOS DIFERENTES PARA DIFERENTES LARGURAS DE DISPOSITIVOS ////
-
-@media (min-width: 576px) and (orientation: portrait) {  
-    .jumbotron {
-        height: 350px;
-    }
-    .jambo {
-        margin-top: 50%;
-    }
-}
-      
-@media (min-width: 576px) and (orientation: landscape) {  
-    .jambo {
-        margin-top: 70px;
-    }          
-}
-    
-@media (min-width: 768px) and (orientation: portrait) {  
-    .jumbotron {
-        height: 350px;
-    }
-    .jambo {
-        margin-top: 50%;
-    }
-}
-@media (min-width: 768px) and (orientation: landscape) {
-    .jambo {
-        margin-top: 70px;
-    }          
-}
-  
-/// DISPOSITIVOS MAIORES /// 
-@media (min-width: 992px) { 
-}
-    
-@media (min-width: 1200px) {  
-}
-    
-.segundanav {
-    background: #25488e;
-    /*background: #85a3e0;*/
-    margin-bottom: 10px;
-    color: white;
-    float:left;
-}          
-    
-.primeiranav {
-    background: #25488e;
-    color: white;
-    float:middle;
-    margin:0px;
-    padding-top:0px;
-}  
-.jambo {
-    /* margin-top:50px;
-    margin-left:100px;
-    margin-right:100px;*/    
-    background: rgb(227, 230, 234, 0.5);    
-}
-    .jumbotron {
-        border-radius: 20px;
-    }
