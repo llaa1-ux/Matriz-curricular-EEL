@@ -123,17 +123,61 @@ h1 {
     margin-bottom: 5px;
 }
 
+/* --- Rodapé: Estilos para todos os tamanhos de tela --- */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d1d1d1;
+    color: #4b4b4b;
+    padding: 20px 40px;
+    font-size: 14px;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-copyright {
+    /* Não precisa de margem, o justify-content: space-between já faz o trabalho */
+}
+
+.footer-contact {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-contact a {
+    color: #4b4b4b;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
 /* --- Media Query para telas menores --- */
 @media (max-width: 768px) {
     .grid-header, .grade-curricular {
-        grid-template-columns: repeat(2, 1fr); /* Reduz para 2 colunas */
+        grid-template-columns: repeat(2, 1fr);
     }
-
     .grid-header h3 {
         font-size: 12px;
     }
-
     .materia {
         font-size: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+    .footer-copyright {
+        margin-bottom: 10px;
     }
 }
