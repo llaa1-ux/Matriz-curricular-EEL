@@ -84,7 +84,7 @@ const preRequisitos = {
 
 document.addEventListener('DOMContentLoaded', () => {
     const todasAsDisciplinas = document.querySelectorAll('.materia');
-    let disciplinaClicada = null; // Variável para rastrear o elemento que foi clicado
+    let disciplinaClicada = null;
 
     function clearHighlights() {
         todasAsDisciplinas.forEach(d => {
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Lógica para a grade principal (mouseover/mouseout)
+    // 1. Lógica para a grade principal (mouseover/mouseout)
     const gradePrincipal = document.querySelector('.grade-curricular');
     const disciplinasDaGrade = gradePrincipal.querySelectorAll('.materia');
     
@@ -131,27 +131,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Lógica para as seções de baixo (click)
-    const secoesDeBaixo = document.querySelectorAll('.bottom-sections .materia');
-    
-    secoesDeBaixo.forEach(disciplina => {
+    // 2. Lógica de clique para TODAS as matérias
+    todasAsDisciplinas.forEach(disciplina => {
         disciplina.addEventListener('click', (event) => {
-            // Previne que o evento de click se propague para o body
             event.stopPropagation();
             
-            // Verifica se a disciplina clicada já está selecionada.
-            // Se sim, desmarca. Se não, marca.
+            // Se a matéria clicada já for a selecionada, desmarca.
             if (disciplinaClicada === disciplina) {
                 clearHighlights();
                 disciplinaClicada = null;
             } else {
+                // Aplica o destaque na nova matéria clicada
                 applyHighlights(disciplina);
                 disciplinaClicada = disciplina;
             }
         });
     });
 
-    // Listener global para limpar o destaque ao clicar em qualquer lugar que não seja uma matéria
+    // 3. Listener global para limpar o destaque ao clicar em qualquer lugar que não seja uma matéria
     document.body.addEventListener('click', (event) => {
         const targetIsMateria = event.target.closest('.materia');
         if (!targetIsMateria) {
