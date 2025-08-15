@@ -1,7 +1,7 @@
 const preRequisitos = {
     // 2º Período
     "CÁLCULO DIFERENCIAL E INTEGRAL I": ["INTRODUÇÃO AO CÁLCULO DIFERENCIAL E INTEGRAL"],
-    "FÍSICA GERAL I": ["INTRODUÇÃO AO CÁLCULO DIFERENCIAL E INTEGRAL"],
+    "FÍSICA GERAL I": ["GEOMETRIA DESCRITIVA", "INTRODUÇÃO AO CÁLCULO DIFERENCIAL E INTEGRAL"],
     "FÍSICA EXPERIMENTAL I": ["FÍSICA GERAL I"],
     "ÁLGEBRA LINEAR I": ["GEOMETRIA ANALÍTICA"],
     "TOPOGRAFIA": ["GEOMETRIA ANALÍTICA", "GEOMETRIA DESCRITIVA"],
@@ -136,4 +136,5 @@ document.addEventListener('DOMContentLoaded', () => {
             disciplinaClicada = null;
         }
     });
+
 });
