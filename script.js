@@ -117,14 +117,14 @@ document.addEventListener('DOMContentLoaded', () => {
     
     disciplinasDaGrade.forEach(disciplina => {
         disciplina.addEventListener('mouseover', () => {
-            // Só aplica o destaque do hover se nenhuma disciplina estiver fixa com clique
+            // Só aplica o destaque do hover se nenhuma disciplina de baixo estiver clicada
             if (!disciplinaClicada) {
                 applyHighlights(disciplina);
             }
         });
 
         disciplina.addEventListener('mouseout', () => {
-            // Só limpa o destaque do hover se nenhuma disciplina estiver fixa com clique
+            // Só limpa o destaque do hover se nenhuma disciplina de baixo estiver clicada
             if (!disciplinaClicada) {
                 clearHighlights();
             }
@@ -156,9 +156,5 @@ document.addEventListener('DOMContentLoaded', () => {
             disciplinaClicada = null;
         }
     });
+
 });
-
-
-
-
-
