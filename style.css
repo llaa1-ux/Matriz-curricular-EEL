@@ -45,7 +45,7 @@ h1 {
 }
 
 .scroll-wrapper {
-    min-width: 1400px; /* LARGURA MÍNIMA PARA MANTER AS 10 COLUNAS */
+    min-width: 1800px; /* << MUDANÇA AQUI: Aumentamos a largura total */
 }
 
 /* --- Grade Curricular (Layout de 10 colunas para todas as telas) --- */
@@ -53,7 +53,7 @@ h1 {
 .grade-curricular {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    gap: 5px;
+    gap: 20px; /* << MUDANÇA AQUI: Aumentamos o espaçamento entre colunas */
 }
 
 .grid-header {
@@ -72,7 +72,7 @@ h1 {
 .periodo-coluna {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 5px; /* Espaçamento entre as matérias de uma mesma coluna */
 }
 
 .materia {
@@ -109,9 +109,9 @@ h1 {
 
 /* --- Seções Inferiores (Ênfases, Optativas) --- */
 .bottom-sections {
-    display: flex; /* Layout em linha para preencher o espaço horizontal */
+    display: flex; 
     gap: 20px;
-    margin-top: 20px; /* Espaçamento acima das seções */
+    margin-top: 20px;
 }
 
 .section-container {
@@ -119,8 +119,8 @@ h1 {
     border: 1px solid #ddd;
     padding: 15px;
     border-radius: 8px;
-    flex: 1; /* Faz com que as seções dividam o espaço */
-    min-width: 300px; /* Largura mínima para cada seção */
+    flex: 1;
+    min-width: 300px;
 }
 
 .section-container h3 {
