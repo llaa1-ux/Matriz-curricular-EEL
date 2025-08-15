@@ -6,6 +6,7 @@ const preRequisitos = {
     "FÍSICA EXPERIMENTAL I": ["FÍSICA GERAL I"],
     "ÁLGEBRA LINEAR": ["GEOMETRIA ANALÍTICA"], 
     "LABORATÓRIO DE CIRCUITOS LÓGICOS": ["CIRCUITOS LÓGICOS"],
+    "TÉCNICAS DE PROGRAMAÇÃO": ["INTRODUÇÃO À PROGRAMAÇÃO"],
 
     // 3º Período
     "CÁLCULO DIFERENCIAL E INTEGRAL II": ["CÁLCULO DIFERENCIAL E INTEGRAL I"],
@@ -157,6 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
 
 
 
