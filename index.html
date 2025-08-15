@@ -2,9 +2,27 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1900">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" id="viewport-meta">
+
     <title>Matriz Curricular - Engenharia Elétrica</title>
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        // Esta função verifica o tamanho da tela e aplica a tag viewport correta.
+        (function() {
+            // Define o ponto de quebra. Telas menores que 1024px são consideradas "mobile".
+            const mobileBreakpoint = 1024;
+            
+            const viewportMeta = document.getElementById('viewport-meta');
+            
+            if (window.screen.width < mobileBreakpoint) {
+                // Se for uma tela pequena (celular/tablet), força a largura ampla para permitir zoom.
+                viewportMeta.setAttribute('content', 'width=1900');
+            }
+            // Se for uma tela maior, a tag padrão (width=device-width) que já está no HTML será usada.
+        })();
+    </script>
 </head>
 <body>
 
@@ -129,7 +147,9 @@
                     <div class="materia" data-disciplina="ESTÁGIO">ESTÁGIO</div>
                     <div class="materia" data-disciplina="ATIVIDADES COMPLEMENTARES">ATIVIDADES COMPLEMENTARES</div>
                 </div>
-            </div> <div class="bottom-sections">
+            </div> 
+
+            <div class="bottom-sections">
                 <div class="section-container">
                     <h3>Habilitação em Eletrotécnica (optativas)</h3>
                     <div class="materia" data-disciplina="OPERAÇÃO E CONTROLE DE SISTEMAS ELÉTRICOS">OPERAÇÃO E CONTROLE DE SISTEMAS ELÉTRICOS</div>
@@ -165,13 +185,17 @@
                     <div class="materia" data-disciplina="Empreendedorismo e Inovação">Empreendedorismo e Inovação</div>
                     <div class="materia" data-disciplina="Topografia">Topografia</div>
                 </div>
-            </div> </div> </div> <footer class="footer">
+            </div> 
+        </div> 
+    </div> 
+    
+    <footer class="footer">
         <div class="footer-copyright">
             <span>©2025 Leonardo Lucas</span>
         </div>
         <div class="footer-contact">
             <a href="https://www.instagram.com/__leonardolucas/" class="instagram-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
@@ -184,4 +208,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
