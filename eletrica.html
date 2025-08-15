@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" id="viewport-meta">
+    <title>Matriz Curricular - Engenharia Elétrica</title>
+    <link rel="icon" href="https://www2.ifal.edu.br/o-ifal/comunicacao/arquivos/logos/ifal.png/">
+    <link rel="apple-touch-icon" href="https://www2.ifal.edu.br/o-ifal/comunicacao/arquivos/logos/ifal.png/">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        // Esta função verifica o tamanho da tela e aplica a tag viewport correta.
+        (function() {
+            // Define o ponto de quebra. Telas menores que 1024px são consideradas "mobile".
+            const mobileBreakpoint = 1024;
+            
+            const viewportMeta = document.getElementById('viewport-meta');
+            
+            if (window.screen.width < mobileBreakpoint) {
+                // Se for uma tela pequena (celular/tablet), força a largura ampla para permitir zoom.
+                viewportMeta.setAttribute('content', 'width=1900');
+            }
+            // Se for uma tela maior, a tag padrão (width=device-width) que já está no HTML será usada.
+        })();
+    </script>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="home-link" aria-label="Página inicial">
+            <div class="home-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L0 12h3v10h6v-6h6v6h6V12h3L12 2z"/></svg>
+            </div>
+        </a>
+        <div class="header-title">
+            <h1>Engenharia Elétrica</h1>
+        </div>
+    </header>
+
+    <div class="main-container">
+        
+        <div class="scroll-wrapper">
+            
+            <div class="grid-header">
+                <h3>1º Período</h3>
+                <h3>2º Período</h3>
+                <h3>3º Período</h3>
+                <h3>4º Período</h3>
+                <h3>5º Período</h3>
+                <h3>6º Período</h3>
+                <h3>7º Período</h3>
+                <h3>8º Período</h3>
+                <h3>9º Período</h3>
+                <h3>10º Período</h3>
+            </div>
+
+            <div class="grade-curricular">
+                <div class="periodo-coluna">
+                    <div class="materia" data-disciplina="INTRODUÇÃO AO CÁLCULO DIFERENCIAL E INTEGRAL">INTRODUÇÃO AO CÁLCULO DIFERENCIAL E INTEGRAL</div>
+                    <div class="materia" data-disciplina="INTRODUÇÃO À PROGRAMAÇÃO">INTRODUÇÃO À PROGRAMAÇÃO</div>
+                    <div class="materia" data-disciplina="QUÍMICA GERAL">QUÍMICA GERAL</div>
+                    <div class="materia" data-disciplina="QUÍMICA GERAL EXPERIMENTAL">QUÍMICA GERAL EXPERIMENTAL</div>
+                    <div class="materia" data-disciplina="GEOMETRIA ANALÍTICA">GEOMETRIA ANALÍTICA</div>
+                    <div class="materia" data-disciplina="INTRODUÇÃO À ENGENHARIA ELÉTRICA">INTRODUÇÃO À ENGENHARIA ELÉTRICA</div>
+                    <div class="materia" data-disciplina="DESENHO TÉCNICO PARA ENGENHARIA ELÉTRICA">DESENHO TÉCNICO PARA ENGENHARIA ELÉTRICA</div>
+                    <div class="materia" data-disciplina="INGLÊS INSTRUMENTAL">INGLÊS INSTRUMENTAL</div>
+                </div>
+                <div class="periodo-coluna">
+                    <div class="materia" data-disciplina="CÁLCULO DIFERENCIAL E INTEGRAL I">CÁLCULO DIFERENCIAL E INTEGRAL I</div>
+                    <div class="materia" data-disciplina="FÍSICA GERAL I">FÍSICA GERAL I</div>
+                    <div class="materia" data-disciplina="FÍSICA EXPERIMENTAL I">FÍSICA EXPERIMENTAL I</div>
+                    <div class="materia" data-disciplina="ÁLGEBRA LINEAR">ÁLGEBRA LINEAR</div>
+                    <div class="materia" data-disciplina="CIRCUITOS LÓGICOS">CIRCUITOS LÓGICOS</div>
+                    <div class="materia" data-disciplina="LABORATÓRIO DE CIRCUITOS LÓGICOS">LABORATÓRIO DE CIRCUITOS LÓGICOS</div>
+                    <div class="materia" data-disciplina="TÉCNICAS DE PROGRAMAÇÃO">TÉCNICAS DE PROGRAMAÇÃO</div>
+                    <div class="materia" data-disciplina="DIREITO E LEGISLAÇÃO">DIREITO E LEGISLAÇÃO</div>
+                </div>
+                <div class="periodo-coluna">
+                    <div class="materia" data-disciplina="CÁLCULO DIFERENCIAL E INTEGRAL II">CÁLCULO DIFERENCIAL E INTEGRAL II</div>
+                    <div class="materia" data-disciplina="FÍSICA GERAL II">FÍSICA GERAL II</div>
+                    <div class="materia" data-disciplina="ESTATÍSTICA E PROBABILIDADE">ESTATÍSTICA E PROBABILIDADE</div>
+                    <div class="materia" data-disciplina="CÁLCULO NUMÉRICO">CÁLCULO NUMÉRICO</div>
+                    <div class="materia" data-disciplina="EQUAÇÕES DIFERENCIAIS ORDINÁRIAS">EQUAÇÕES DIFERENCIAIS ORDINÁRIAS</div>
+                    <div class="materia" data-disciplina="COMUNICAÇÃO E EXPRESSÃO">COMUNICAÇÃO E EXPRESSÃO</div>
+                    <div class="materia" data-disciplina="SOCIOLOGIA DO TRABALHO">SOCIOLOGIA DO TRABALHO</div>
+                </div>
+                <div class="periodo-coluna">
+                    <div class="materia" data-disciplina="CÁLCULO DIFERENCIAL E INTEGRAL III">CÁLCULO DIFERENCIAL E INTEGRAL III</div>
+                    <div class="materia" data-disciplina="FENÔMENOS DE TRANSPORTE">FENÔMENOS DE TRANSPORTE</div>
+                    <div class="materia" data-disciplina="ANÁLISE DE SINAIS E SISTEMAS">ANÁLISE DE SINAIS E SISTEMAS</div>
+                    <div class="materia" data-disciplina="CIRCUITOS ELÉTRICOS I">CIRCUITOS ELÉTRICOS I</div>
+                    <div class="materia" data-disciplina="LABORATÓRIO DE CIRCUITOS ELÉTRICOS I">LABORATÓRIO DE CIRCUITOS ELÉTRICOS I</div>
+                    <div class="materia" data-disciplina="MATERIAIS ELÉTRICOS">MATERIAIS ELÉTRICOS</div>
+                    <div class="materia" data-disciplina="METODOLOGIA CIENTÍFICA">METODOLOGIA CIENTÍFICA</div>
+                </div>
+                <div class="periodo-coluna">
+                    <div class="materia" data-disciplina="ELETROMAGNETISMO I">ELETROMAGNETISMO I</div>
+                    <div class="materia" data-disciplina="LABORATÓRIO DE ELETROMAGNETISMO I">LABORATÓRIO DE ELETROMAGNETISMO I</div>
+                    <div class="materia" data-disciplina="PROCESSAMENTO DIGITAL DE SINAIS">PROCESSAMENTO DIGITAL DE SINAIS</div>
+                    <div class="materia" data-disciplina="LABORATÓRIO DE PROCESSAMENTO DIGITAL DE SINAIS">LABORATÓRIO DE PROCESSAMENTO DIGITAL DE SINAIS</div>
+                    <div class="materia" data-disciplina="CIRCUITOS ELÉTRICOS II">CIRCUITOS ELÉTRICOS II</div>
+                    <div class="materia" data-disciplina="LABORATÓRIO DE CIRCUITOS ELÉTRICOS II">LABORATÓRIO DE CIRCUITOS ELÉTRICOS II</div>
+                    <div class="materia" data-disciplina="ELETRÔNICA I">ELETRÔNICA I</div>
+                    <div class="materia" data-disciplina="LABORATÓRIO DE ELETRÔNICA I">LABORATÓRIO DE ELETRÔNICA I</div>
+                </div>
+                <div class="periodo-coluna">
+                    <div class="materia" data-disciplina="ELETROMAGNETISMO II">ELETROMAGNETISMO II</div>
+                    <div class="materia" data-disciplina="SISTEMAS ELÉTRICOS">SISTEMAS ELÉTRICOS</div>
+                    <div class="materia" data-disciplina="LABORATÓRIO DE SISTEMAS ELÉTRICOS">LABORATÓRIO DE SISTEMAS ELÉTRICOS</div>
+                    <div class="materia" data-disciplina="CONTROLADORES LÓGICOS PROGRAMÁVEIS">CONTROLADORES LÓGICOS PROGRAMÁVEIS</div>
+                    <div class="materia" data-disciplina="INSTALAÇÕES ELÉTRICAS PREDIAIS">INSTALAÇÕES ELÉTRICAS PREDIAIS</div>
+                    <div class="materia" data-disciplina="ELETRÔNICA II">ELETRÔNICA II</div>
+                    <div class="materia" data-disciplina="LABORATÓRIO DE ELETRÔNICA II">LABORATÓRIO DE ELETRÔNICA II</div>
+                    <div class="materia" data-disciplina="SEGURANÇA DO TRABALHO">SEGURANÇA DO TRABALHO</div>
+                </div>
+                <div class="periodo-coluna">
+                    <div class="materia" data-disciplina="CONVERSÃO ELETROMECÂNICA">CONVERSÃO ELETROMECÂNICA</div>
+                    <div class="materia" data-disciplina="ANÁLISE DE SISTEMAS ELÉTRICOS">ANÁLISE DE SISTEMAS ELÉTRICOS</div>
+                    <div class="materia" data-disciplina="TEORIA DE CONTROLE">TEORIA DE CONTROLE</div>
+                    <div class="materia" data-disciplina="INTRODUÇÃO A ENERGIAS RENOVÁVEIS">INTRODUÇÃO A ENERGIAS RENOVÁVEIS</div>
+                    <div class="materia" data-disciplina="ELETRÔNICA DE POTÊNCIA">ELETRÔNICA DE POTÊNCIA</div>
+                    <div class="materia" data-disciplina="LABORATÓRIO DE ELETRÔNICA DE POTÊNCIA">LABORATÓRIO DE ELETRÔNICA DE POTÊNCIA</div>
+                    <div class="materia" data-disciplina="AUTOMAÇÃO INDUSTRIAL">AUTOMAÇÃO INDUSTRIAL</div>
+                </div>
+                <div class="periodo-coluna">
+                    <div class="materia" data-disciplina="MÁQUINAS ELÉTRICAS">MÁQUINAS ELÉTRICAS</div>
+                    <div class="materia" data-disciplina="LABORATÓRIO DE MÁQUINAS ELÉTRICAS">LABORATÓRIO DE MÁQUINAS ELÉTRICAS</div>
+                    <div class="materia" data-disciplina="INSTALAÇÕES ELÉTRICAS INDUSTRIAIS">INSTALAÇÕES ELÉTRICAS INDUSTRIAIS</div>
+                    <div class="materia" data-disciplina="LABORATÓRIO DE INSTALAÇÕES ELÉTRICAS INDUSTRIAIS">LABORATÓRIO DE INSTALAÇÕES ELÉTRICAS INDUSTRIAIS</div>
+                    <div class="materia" data-disciplina="ÊNFASE CURRICULAR">ÊNFASE CURRICULAR</div>
+                    <div class="materia" data-disciplina="ÊNFASE CURRICULAR 2">ÊNFASE CURRICULAR</div>
+                    <div class="materia" data-disciplina="ÊNFASE CURRICULAR 3">ÊNFASE CURRICULAR</div>
+                </div>
+                <div class="periodo-coluna">
+                    <div class="materia" data-disciplina="QUALIDADE E REGULAÇÃO DE ENERGIA ELÉTRICA">QUALIDADE E REGULAÇÃO DE ENERGIA ELÉTRICA</div>
+                    <div class="materia" data-disciplina="ENERGIA EÓLICA">ENERGIA EÓLICA</div>
+                    <div class="materia" data-disciplina="ENERGIA SOLAR">ENERGIA SOLAR</div>
+                    <div class="materia" data-disciplina="ÊNFASE CURRICULAR 4">ÊNFASE CURRICULAR</div>
+                    <div class="materia" data-disciplina="ÊNFASE CURRICULAR 5">ÊNFASE CURRICULAR</div>
+                    <div class="materia" data-disciplina="ÊNFASE CURRICULAR 6">ÊNFASE CURRICULAR</div>
+                    <div class="materia" data-disciplina="ÊNFASE CURRICULAR 7">ÊNFASE CURRICULAR</div>
+                </div>
+                <div class="periodo-coluna">
+                    <div class="materia" data-disciplina="OPTATIVA">OPTATIVA</div>
+                    <div class="materia" data-disciplina="OPTATIVA 2">OPTATIVA</div>
+                    <div class="materia" data-disciplina="TCC">TCC</div>
+                    <div class="materia" data-disciplina="ESTÁGIO">ESTÁGIO</div>
+                    <div class="materia" data-disciplina="ATIVIDADES COMPLEMENTARES">ATIVIDADES COMPLEMENTARES</div>
+                </div>
+            </div> 
+
+            <div class="bottom-sections">
+                <div class="section-container">
+                    <h3>Habilitação em Eletrotécnica (optativas)</h3>
+                    <div class="materia" data-disciplina="OPERAÇÃO E CONTROLE DE SISTEMAS ELÉTRICOS">OPERAÇÃO E CONTROLE DE SISTEMAS ELÉTRICOS</div>
+                    <div class="materia" data-disciplina="COMPATIBILIDADE ELETROMAGNÉTICA">COMPATIBILIDADE ELETROMAGNÉTICA</div>
+                    <div class="materia" data-disciplina="GERAÇÃO DE ENERGIA ELÉTRICA">GERAÇÃO DE ENERGIA ELÉTRICA</div>
+                    <div class="materia" data-disciplina="DISTRIBUIÇÃO DE ENERGIA ELÉTRICA">DISTRIBUIÇÃO DE ENERGIA ELÉTRICA</div>
+                    <div class="materia" data-disciplina="EFICIÊNCIA E PLANEJAMENTO ENERGÉTICO">EFICIÊNCIA E PLANEJAMENTO ENERGÉTICO</div>
+                    <div class="materia" data-disciplina="TRANSMISSÃO DE ENERGIA ELÉTRICA">TRANSMISSÃO DE ENERGIA ELÉTRICA</div>
+                    <div class="materia" data-disciplina="TRANSITÓRIOS ELETROMAGNÉTICOS">TRANSITÓRIOS ELETROMAGNÉTICO S</div>
+                    <div class="materia" data-disciplina="PROTEÇÃO DE SISTEMAS ELÉTRICOS">PROTEÇÃO DE SISTEMAS ELÉTRICOS</div>
+                    <div class="materia" data-disciplina="EQUIPAMENTOS ELÉTRICOS">EQUIPAMENTOS ELÉTRICOS</div>
+                    <div class="materia" data-disciplina="TÓPICOS ESPECIAIS">TÓPICOS ESPECIAIS</div>
+                </div>
+        
+                <div class="section-container">
+                    <h3>Habilitação em Controle e Automação Industrial (optativas)</h3>
+                    <div class="materia" data-disciplina="REDES INDUSTRIAIS">REDES INDUSTRIAIS</div>
+                    <div class="materia" data-disciplina="ACIONAMENTOS ELÉTRICOS">ACIONAMENTOS ELÉTRICOS</div>
+                    <div class="materia" data-disciplina="REDES DE COMPUTADORES">REDES DE COMPUTADORES</div>
+                    <div class="materia" data-disciplina="CONVERSORES ESTÁTICOS DE POTÊNCIA">CONVERSORES ESTÁTICOS DE POTÊNCIA</div>
+                    <div class="materia" data-disciplina="MICROCONTROLADORES">MICROCONTROLADORES</div>
+                    <div class="materia" data-disciplina="INFORMÁTICA INDUSTRIAL">INFORMÁTICA INDUSTRIAL</div>
+                    <div class="materia" data-disciplina="INSTRUMENTAÇÃO INDUSTRIAL">INSTRUMENTAÇÃO INDUSTRIAL</div>
+                    <div class="materia" data-disciplina="TÓPICOS AVANÇADOS EM CONTROLE">TÓPICOS AVANÇADOS EM CONTROLE</div>
+                    <div class="materia" data-disciplina="TÓPICOS ESPECIAIS">TÓPICOS ESPECIAIS</div>
+                </div>
+        
+                <div class="section-container">
+                    <h3>Optativas</h3>
+                    <div class="materia" data-disciplina="Libras">Libras</div>
+                    <div class="materia" data-disciplina="Engenharia Econômica">Engenharia Econômica</div>
+                    <div class="materia" data-disciplina="Engenharia Ambiental">Engenharia Ambiental</div>
+                    <div class="materia" data-disciplina="Empreendedorismo e Inovação">Empreendedorismo e Inovação</div>
+                    <div class="materia" data-disciplina="Topografia">Topografia</div>
+                </div>
+            </div> 
+        </div> 
+    </div> 
+    
+    <footer class="footer">
+        <div class="footer-copyright">
+            <span>©2025 Leonardo Lucas</span>
+        </div>
+        <div class="footer-contact">
+            <a href="https://www.instagram.com/__leonardolucas/" class="instagram-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                <span>@__leonardolucas</span>
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
